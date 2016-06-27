@@ -1,0 +1,201 @@
+
+/*+-------------------------- Start Loading --------------------------+*/
+.loading {
+    width: 100%;
+    height: 100vh;
+    background-color: #17191F;
+    display: none  
+}
+
+.loading .circle {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 10%;
+    position: relative;
+    left: 40vw;
+    border: 5px solid #FFF;
+    box-shadow: 0 0 5px #1A7AB9, 0 0 5px #1A7AB9 inset;
+    -webkit-animation: bshadow  3s infinite linear;
+       -moz-animation: bshadow  3s infinite linear;
+        -ms-animation: bshadow  3s infinite linear;
+         -o-animation: bshadow  3s infinite linear;
+            animation: bshadow  3s infinite linear;
+}
+
+.loading h2{
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    top: 40%;
+    color: #CCC;
+    width: 100%;
+    font-size: 3vw;
+    text-shadow: 0 0 3px #0FF;
+    -webkit-animation: shadow  3s infinite linear;
+       -moz-animation: shadow  3s infinite linear;
+        -ms-animation: shadow  3s infinite linear;
+         -o-animation: shadow  3s infinite linear;
+            animation: shadow  3s infinite linear
+}
+
+.loading h2 span { color: #0FF }
+
+/*+-------------------------- End Loading --------------------------+*/
+
+/*
+    +--------------------------------------------------------+
+                    Start Loading  Animation                                                               
+    +--------------------------------------------------------+ */
+
+
+
+/* ######################### Animation for Chrome ######################### */
+@-webkit-keyframes shadow {
+    0%     { text-shadow: 0 0 15px #1A7AB9 }
+    25%    { text-shadow: 0 0 05px #1A7AB9 }
+    50%    { text-shadow: 0 0 01px #1A7AB9 }
+    75%    { text-shadow: 0 0 05px #1A7AB9 }
+    100%   { text-shadow: 0 0 15px #1A7AB9 }
+}
+
+@-webkit-keyframes bshadow {
+    0%     { box-shadow: 0 0 20px #1A7AB9, 0 0 20px #1A7AB9 inset }
+    25%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    50%    { box-shadow: 0 0 01px #1A7AB9, 0 0 01px #1A7AB9 inset }
+    75%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    100%   { box-shadow: 0 0 15px #1A7AB9, 0 0 15px #1A7AB9 inset }
+}
+
+
+/* ######################### Animation for Mozilla  ######################### */
+@-moz-keyframes shadow {
+    0%     { text-shadow: 0 0 10px #1A7AB9 }
+    25%    { text-shadow: 0 0 05px #1A7AB9 }
+    50%    { text-shadow: 0 0 01px #1A7AB9 }
+    75%    { text-shadow: 0 0 05px #1A7AB9 }
+    100%   { text-shadow: 0 0 10px #1A7AB9 }
+}
+
+@-moz-keyframes bshadow {
+    0%     { box-shadow: 0 0 15px #1A7AB9, 0 0 15px #1A7AB9 inset }
+    25%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    50%    { box-shadow: 0 0 01px #1A7AB9, 0 0 01px #1A7AB9 inset }
+    75%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    100%   { box-shadow: 0 0 15px #1A7AB9, 0 0 15px #1A7AB9 inset }
+}
+
+
+/* ######################### Animation for IE  ######################### */
+@-ms-keyframes shadow {
+    0%     { text-shadow: 0 0 15px #1A7AB9 }
+    25%    { text-shadow: 0 0 05px #1A7AB9 }
+    50%    { text-shadow: 0 0 01px #1A7AB9 }
+    75%    { text-shadow: 0 0 05px #1A7AB9 }
+    100%   { text-shadow: 0 0 15px #1A7AB9 }
+}
+
+@-ms-keyframes bshadow {
+    0%     { box-shadow: 0 0 20px #1A7AB9, 0 0 20px #1A7AB9 inset }
+    25%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    50%    { box-shadow: 0 0 01px #1A7AB9, 0 0 01px #1A7AB9 inset }
+    75%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    100%   { box-shadow: 0 0 20px #1A7AB9, 0 0 20px #1A7AB9 inset }
+}
+
+
+/* ######################### Animation for Opera  ######################### */
+@-o-keyframes shadow {
+    0%     { text-shadow: 0 0 15px #1A7AB9 }
+    25%    { text-shadow: 0 0 05px #1A7AB9 }
+    50%    { text-shadow: 0 0 01px #1A7AB9 }
+    75%    { text-shadow: 0 0 05px #1A7AB9 }
+    100%   { text-shadow: 0 0 15px #1A7AB9 }
+}
+
+@-o-keyframes bshadow {
+    0%     { box-shadow: 0 0 20px #1A7AB9, 0 0 20px #1A7AB9 inset }
+    25%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    50%    { box-shadow: 0 0 01px #1A7AB9, 0 0 01px #1A7AB9 inset }
+    75%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    100%   { box-shadow: 0 0 20px #1A7AB9, 0 0 20px #1A7AB9 inset }
+}
+
+
+/* ######################### Animation  ######################### */
+@keyframes shadow {
+    0%     { text-shadow: 0 0 15px #1A7AB9 }
+    25%    { text-shadow: 0 0 05px #1A7AB9 }
+    50%    { text-shadow: 0 0 01px #1A7AB9 }
+    75%    { text-shadow: 0 0 05px #1A7AB9 }
+    100%   { text-shadow: 0 0 15px #1A7AB9 }
+}
+
+@keyframes bshadow {
+    0%     { box-shadow: 0 0 20px #1A7AB9, 0 0 20px #1A7AB9 inset }
+    25%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    50%    { box-shadow: 0 0 01px #1A7AB9, 0 0 01px #1A7AB9 inset }
+    75%    { box-shadow: 0 0 02px #1A7AB9, 0 0 02px #1A7AB9 inset }
+    100%   { box-shadow: 0 0 20px #1A7AB9, 0 0 20px #1A7AB9 inset }
+}
+
+/*
+    +--------------------------------------------------------+
+                    Start Show apps  Animation                                                               
+    +--------------------------------------------------------+ */
+
+
+@-webkit-keyframes sh_apps {
+    0% { position: absolute}
+}
+
+@-moz-keyframes sh_apps{
+    0% { position: absolute}
+}
+
+@-ms-keyframes sh_apps {
+    0% { position: absolute}
+}
+
+@-o-keyframes sh_apps{
+    0% { position: absolute}
+}
+
+@keyframes sh_apps{
+    0% { position: absolute}
+}
+
+/*
+    +--------------------------------------------------------+
+                    Start cursor blink  Animation                                                               
+    +--------------------------------------------------------+ */
+@keyframes blink {
+    0%    { opacity: 1 }
+    25%   { opacity: 0 }
+    50%   { opacity: 0 }
+    75%   { opacity: 0 }
+    100%  { opacity: 1 }
+}
+@-webkit-keyframes blink {
+    0%    { opacity: 1 }
+    25%   { opacity: 0 }
+    50%   { opacity: 0 }
+    75%   { opacity: 0 }
+    100%  { opacity: 1 }
+}
+@-ms-keyframes blink {
+    0%    { opacity: 1 }
+    25%   { opacity: 0 }
+    50%   { opacity: 0 }
+    75%   { opacity: 0 }
+    100%  { opacity: 1 }
+}
+@-moz-keyframes blink {
+    
+    0%    { opacity: 1 }
+    25%   { opacity: 0 }
+    50%   { opacity: 0 }
+    75%   { opacity: 0 }
+    100%  { opacity: 1 }
+}

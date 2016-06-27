@@ -1,0 +1,1364 @@
+/*
+    +-------------------------------------------------------+
+    |                Gnome style                            |                                               
+    +-------------------------------------------------------+ 
+*/
+
+@font-face { font-family: pt; src: url("../fonts/avenir.woff") }
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box
+}
+
+*::selection { background-color: #A0F; color: #FFF }
+
+*::-moz-selection { background-color: #A0F; color: #FFF }
+
+/*+-------------------------- Start ScrollBar for webkit --------------------------+*/
+.rightNav::-webkit-scrollbar,
+body::-webkit-scrollbar { width: 8px }
+
+.rightNav::-webkit-scrollbar-track, 
+body::-webkit-scrollbar-track {box-shadow: inset 0 0 6px rgba(0, 0, 0, .5) }
+
+.rightNav::-webkit-scrollbar-thumb, 
+body::-webkit-scrollbar-thumb { background-color: #CCC; border-radius: 5px }
+
+.rightNav::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover { background-color: #FFF }
+
+.rightNav::-webkit-scrollbar-thumb:active,
+body::-webkit-scrollbar-thumb:active{ background-color: #0FF }
+
+.applications > div::-webkit-scrollbar { width: 8px }
+
+.applications > div::-webkit-scrollbar-track {}
+
+.applications > div::-webkit-scrollbar-thumb { }
+
+.applications > div::-webkit-scrollbar-thumb:hover { }
+
+.applications > div::-webkit-scrollbar-thumb:active { }
+
+/*+-------------------------- End ScrollBar webkit --------------------------+*/
+
+body { font-family: pt }
+
+ul { list-style: none }
+
+input:focus {outline: none}
+
+.showUl > span {
+    width: 100%;
+    display: inline-block
+}
+
+.line {
+    display: inline-block;
+    height: 1px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgba(51, 57, 57, .8)
+}
+
+
+/*############################### Start Login */
+.login {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../css/images/antergos/18-min.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, .5);
+    background-size: cover;
+    background-position: 50% 60%;
+    overflow: hidden;
+    /*display: none*/
+}
+
+.login .welcome {
+    top: 30vh;
+    left: 25vw;
+    width: 50%;
+    height: 270px /*43vh*/;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #DADADA;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5)
+
+  /*  background: linear-gradient(to bottom, #00496b 0%,#216787 44%,#005d89 96%)*/
+}
+
+.login .welcome > h1 { 
+    text-align: center;
+    font-weight: 100;
+    font-size: 2vw;
+    padding: 1% 3%;
+    margin: 0
+}
+
+.login .welcome > span{
+    width: 100%;
+    height: 50%;
+    font-size: 8vw;
+    color: #4679C8;
+    cursor: pointer;
+    text-align: center;
+	display: inline-block;
+    background-color: #FFF;
+    margin: 1% 0
+}
+
+.login .welcome .cntr {
+    margin: 1% 3%;
+    padding-bottom: 1%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.login .welcome .cntr > i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    float: right;
+    text-align: center;
+    background-color: #FFF;
+    color: #797979;
+    cursor: pointer;
+    transition: .5s all;
+    box-shadow: -1px 2px 0 0 rgba(100, 100, 100, .5);
+    border: 1px solid transparent
+}
+
+.cntr > i:first-child { border-radius: 0 4px 4px 0 }
+
+.cntr > i:last-child { border-radius: 4px 0 0 4px }
+
+.cntr > i:nth-child(2) {
+    border-left: 1px solid rgba(200, 200, 200, .5);
+    border-right: 1px solid rgba(200, 200, 200, .5)
+}
+
+.welcome .cntr > i:hover {
+    color: #141414;
+    background-color: rgba(220, 220, 220, .4);
+    border: 1px solid rgba(45, 45, 45, .1);
+}
+
+.user {
+    margin: 3% auto 10.5%;
+    padding: 1%;
+    width: 50%;
+    line-height: 50px;
+    text-align: left;
+   /* overflow: hidden;*/
+    cursor: pointer;
+    color: #585858;
+    border-radius: 2px;
+    background-color: #FFF;
+    box-shadow: 0 0 2px rgba(153, 153, 153, .4);
+    border: 1px solid rgba(153, 153, 153, .4);
+    display: none;
+    position: relative
+}
+
+.user > span{
+    width: 100%;
+    display: inline-block
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 1px;
+    margin-right: 5%;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    background: #585858
+}
+
+.user > i {
+    position: absolute;
+    left: 110%;
+    top: 0;
+    color: rgba(0, 0, 0, .6)
+}
+
+.login > i { 
+    color: #DDD;
+    font-size: 2vw;
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 4;
+    background-color: #2599DE;
+    transition: .3s color ease
+    
+}
+
+.login > i:hover { color: #FFF }
+
+.login .rightNav {
+	background-color: rgba(0, 0, 0, .4);
+    width: 20vw;
+    height: 100vh;
+    overflow-y: scroll;
+    text-align: center;
+    color: #CCC;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: -20vw;
+    transition: .5s margin ease-in-out
+}
+
+.login .rightNav.navOpen { margin-right: 0  }
+
+.rightNav > span {
+    margin: 35% 0 10% 0;
+    display: inline-block
+}
+
+.rightNav > li {
+    margin: 0 auto 3%;
+    width: 70%;
+    height: 20vh;
+    cursor: pointer;
+    border-radius: 1px;
+    border: 4px solid #F0F0F0;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-image: url(../css/images/antergos/20-min.jpg);
+    transition: .5s background ease-in-out, .5s border ease-in-out
+}
+
+.rightNav > li.bgdSelect,
+.rightNav > li:hover { 
+    background-color: rgba(0, 0, 0, .5); 
+    border-color: #4679C8
+}
+
+.rightNav li:nth-child(2)  { background-image: url(../css/images/antergos/1-min.jpg) }
+.rightNav li:nth-child(3)  { background-image: url(../css/images/antergos/2-min.png) }
+.rightNav li:nth-child(4)  { background-image: url(../css/images/antergos/3-min.jpg) }
+.rightNav li:nth-child(5)  { background-image: url(../css/images/antergos/4-min.jpg) }
+.rightNav li:nth-child(6)  { background-image: url(../css/images/antergos/5-min.jpg) }
+.rightNav li:nth-child(7)  { background-image: url(../css/images/antergos/6-min.jpg) }
+.rightNav li:nth-child(8)  { background-image: url(../css/images/antergos/7-min.jpg) }
+.rightNav li:nth-child(9)  { background-image: url(../css/images/antergos/8-min.jpg) }
+.rightNav li:nth-child(10) { background-image: url(../css/images/antergos/9-min.jpg) }
+.rightNav li:nth-child(11) { background-image: url(../css/images/antergos/10-min.jpg) }
+.rightNav li:nth-child(12) { background-image: url(../css/images/antergos/11-min.jpg) }
+.rightNav li:nth-child(13) { background-image: url(../css/images/antergos/12-min.jpg) }
+.rightNav li:nth-child(14) { background-image: url(../css/images/antergos/13-min.jpg) }
+.rightNav li:nth-child(15) { background-image: url(../css/images/antergos/14-min.jpg) }
+.rightNav li:nth-child(16) { background-image: url(../css/images/antergos/15-min.jpg) }
+.rightNav li:nth-child(17) { background-image: url(../css/images/antergos/16-min.jpg) }
+.rightNav li:nth-child(18) { background-image: url(../css/images/antergos/17-min.jpg) }
+.rightNav li:nth-child(19) { background-image: url(../css/images/antergos/18-min.jpg) }
+.rightNav li:nth-child(20) { background-image: url(../css/images/antergos/19-min.jpg) }
+
+.over {
+	width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none
+}
+/*############################### End Login */
+
+
+/*############################### Start Desktop */
+.desktop {
+	width: 100%;
+    height: 100vh;
+    display: none;
+    background-image: url(images/st.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-color: rgba(0, 0, 0, .3);
+    background-blend-mode: overlay;
+/*    background-image: url(images/antergos/bg_community.jpg);*/
+/*    background-image: url(images/antergos/2-min.png);*/
+    /*background-position: bottom;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+        -ms-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover*/
+}
+
+.desktop .navBar {
+	width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #2D2D2D;
+    border-bottom: 1px solid rgba(72, 72, 72, .5)
+}
+
+.navBar > li {
+	float: left;
+    z-index: 10;
+    padding: 0 2%;
+    color: #C9DCDC;
+    cursor: default;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    transition: .2s background ease-in-out
+}
+
+.navBar > li:hover { background-color: #134FE6 }
+
+
+/*######################## start places */
+.navBar > li > ul {
+    top: 160%;
+    left: 30%;
+    z-index: 20;
+    width: 250px;
+    display: none;
+    border: 1px solid;
+    position: absolute;
+    border-radius: 4px;
+    background-color: #2D2D2D;
+    border-color: rgba(72, 72, 72, .5);
+    box-shadow: 0 0 5px rgba(72, 72, 72, .5)
+}
+
+.navBar > li > ul:before {
+    left: 5%;
+    content: "";
+    bottom: 100%;
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent transparent #2D2D2D transparent
+}
+
+.navBar li > ul > li {
+    width: 100%;
+    line-height: 6vh;
+    font-weight: 100;
+    text-align: left;
+    overflow: hidden;
+    padding-left: 15%;
+    transition: .2s background ease-in-out
+}
+
+.navBar li > ul > li:first-child { margin-top: 5%; }
+
+.navBar > li > ul > li:last-child { 
+    margin-bottom: 5%;
+    border-radius: 0 0 4px 4px
+}
+
+.navBar li > ul > li:hover { background-color: rgba(0, 0, 0, .2) }
+
+.navBar li > ul > li i { margin-right: 8% }
+/*######################## end places */
+
+
+/*######################## start date & time */
+.navBar > li:nth-child(3) { margin-left: 25vw }
+
+.w img {
+    width: 14%;
+    float: right;
+    border: none
+
+}
+
+.navBar > li ul.date_time {
+    width: 70vw;
+    left: -235%
+}
+
+.navBar > li > ul.date_time:before { left: 48% }
+
+.date_time > div { width: 50%;padding: 2% 1% 5% 1% }
+
+.date_time .notification {
+	float: left;
+    text-align: center
+}
+
+.date_time .cal {
+	float: right;
+    padding-left: 5%;
+}
+
+.date_time .cal .main_cal {
+	width: 80%;
+    margin: 0 auto
+}
+
+.date_time .cal > span {
+    width: 100%;
+    text-align: left;
+    display: inline-block
+}
+
+.date_time .cal .control {
+    width: 80%;
+    margin: 4% 0;
+    line-height: 50%;
+    text-align: center
+}
+.control i {
+    float: left;
+    cursor: pointer;
+    margin-left: 7%
+}
+
+.control i:last-child {
+    float: right;
+    margin-right: 7%
+}
+
+.cal .main_cal button {
+    width: 40px;
+    color: #999;
+    height: 40px;
+    outline: 0 none;
+    cursor: pointer;
+    margin-bottom: 1%;
+    text-align: center;  
+    border-radius: 50%;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid rgba(70, 70, 70, .5);
+    transition: .2s background ease, .2s color ease
+}
+
+.cal .main_cal button.days { border: none }
+
+.cal .main_cal button.cout { 
+    color: #FFF;
+    background-color: rgba(85, 85, 85, .4)        
+}
+
+.cal .main_cal button.this_day {
+    color: #fff;
+    font-weight: bold;
+    background: #134FE6
+}
+
+
+.cal .main_cal button:hover { 
+    color: #FFF;
+    background-color: rgba(46, 163, 242, .5)
+}
+
+.not { border-bottom: 1px solid rgba(70, 70, 70, .1) }
+
+.notification .weather,
+.notification .not {
+	width: 100%;
+    margin-bottom: 2%;
+    padding: 30px 0 60px 0;
+    /*line-height: 200px;*/
+    display: inline-block
+}
+
+.weather > img { width: 30px; height: 30px }
+
+.weather > span.get_weather {
+    font-weight: 100;
+	display: block
+}
+/*######################## End date & time */
+
+
+
+/*######################## start settings */
+.navBar > li.settings { 
+    float: right;
+    padding: 0 1%;
+    font-weight: 100
+}
+
+.navBar > li.settings i { width: 2vw }
+
+.navBar > li.settings > ul { left: -185%; width: 400px }
+
+.navBar > li.settings > ul:before { left: 85% }
+
+.navBar > li.settings > ul > li { 
+    padding-left: 5%;
+    text-align: left;
+    position: relative
+}
+
+
+/*######################## start volume */
+.navBar > li.settings > ul > li > span.vlm {
+    top: 50%;
+    left: 21%;
+    height: 5px;
+    position: absolute;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #fff
+} 
+
+.navBar > li.settings > ul input { 
+    width: 70%;
+    z-index: 8;
+    margin-top: 5%;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    background-color: transparent
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track { outline: none }
+
+input[type=range]::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+input[type=range]::-webkit-slider-thumb{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: -9px;
+    appearance: none;
+    border-radius: 50%;
+    background-color: #FFF;
+    -webkit-appearance: none;
+    box-shadow: 0 0 2px rgba(200, 200, 200, .4);
+}
+
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: -9px;
+    appearance: none;
+    border-radius: 50%;
+    -moz-appearance: none;
+    background-color: #FFF;
+    box-shadow: 0 0 2px rgba(200, 200, 200, .4)
+}
+
+input[type=range]:focus { outline: none }
+
+.navBar > li.settings .vl {
+    margin-left: 2%;
+    display: inline-block
+}
+/*######################## end volume */
+
+
+/*######################## start connectin */
+.stat { 
+    width: 50%; 
+    float: right; 
+    text-align: right 
+}
+
+div span.connected { 
+    color: #FFF;
+    font-weight: bold
+}
+
+.navBar li > ul > li span:first-of-type i { margin-right: 2% }
+
+.settings li div{
+    width: 107%;
+    margin-left: -6%;
+    display: none;
+    box-shadow: 0  2px 3px rgba(0, 0, 0, .5) inset,
+                0 -2px 3px rgba(0, 0, 0, .5) inset
+}
+
+.settings li div > span {
+    display: block;
+    padding-left: 15%;
+    padding-right: 5%;
+    transition: .2s background ease-in-out
+}
+
+.settings li div > span:hover { background-color: rgba(0, 0, 0, .4) }
+
+/*######################## end connectin */
+
+
+/*######################## start poweroff */
+.navBar li > ul > li.pow_last {
+    line-height: 15vh;
+    text-align: center
+}
+
+.navBar li > ul > li.pow_last:hover { background-color: transparent }
+
+.navBar > li.settings .pow_last i{
+    width: 4vw;
+    height: 4vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    line-height: 4vw;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgba(70, 70, 70, .5);
+    transition: .2s background ease-in-out, .2s color ease-in-out
+}
+
+.navBar > li.settings .pow_last i:hover {
+    color: #FFF; 
+    background-color: #134FE6
+}
+/*######################## end poweroff */
+/*######################## End settings */
+
+
+/*######################## start cnchi (install antergos ) */
+.cnchi {
+    top: 15%;
+    left: 20%;
+    width: 60%;
+    display: none;
+    position: absolute;
+    border: 1px solid #484848;
+    background-color: #DADADA;
+    border-radius: 2px 2px 0 0;
+    transition: .2s all ease-in-out;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5)
+}
+
+.cnchi > a {
+    left: 98%;
+    bottom: 95%;
+    color: #FFF;
+    width: 50px;
+    height: 50px;
+    display: none;
+    font-size: 3vw;
+    cursor: pointer;
+    line-height: 38px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    border: 4px solid #FFF;
+    background-color: #134FE6;
+}
+
+.cnchi .header {
+    height: 60px;
+    overflow: hidden;
+    background-image: url("images/antergos/21.jpg")
+}
+
+.cnchi .header > .bgi {
+    width: 25%;
+    float: left;
+    height: 100%;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-image: url("images/antergos/welcome.jpg")
+}
+
+.cnchi .header > h3 {
+    width: 50%;
+    float: left;
+    color: #FFF;
+    height: 100%;
+    padding-top: 5px;
+    text-align: center
+}
+
+.cnchi .header > h3 span { color: #134FE6 }
+
+.cnchi .header > .mini {
+    width: 25%;
+    height: 100%;
+    float: right;
+    color: #707070;
+    font-size: 30px;
+    text-align: right;
+    line-height: 50px;
+    padding-right: 10px;
+    display: inline-block
+}
+
+.cnchi .header > .mini span { 
+    cursor: pointer;
+    transition: .2s color ease-in-out
+}
+
+.cnchi .header > .mini span:hover { color: #EEE }
+
+.cnchi .try,
+.cnchi .install {
+    width: 50%;
+    float: left;
+    text-align: center
+	
+}
+
+.cnchi > div:not(.letStart) > i {
+    font-size: 10vw;
+    margin-top: 15%;
+}
+
+.cnchi > div > i.fa-desktop { color: #A085FE }
+
+.cnchi > div > i.fa-cloud-download { color: #F281E2 }
+
+.cnchi > div > p {
+    width: 62%;
+    text-align: center;
+    margin: 22px auto;
+    font-size: 1.2vw;
+}
+
+.cnchi > div > button {
+    color: #134FE6;
+    padding: 2% 20%;
+    font-size: 2vw;
+    margin-bottom: 15%;
+    border-radius: 2px;
+    background-color: #FFF;
+    border: 1px solid #134FE6;
+    box-shadow: 0 0 0 1px #134FE6;
+    transition: .2s color ease-in-out, .2s background ease-in-out
+}
+
+.cnchi > div > button:hover {
+    color: #FFF;
+    background-color: #134FE6
+}
+
+/*install or try*/
+
+.letStart{
+    top: 13%;
+    width: 100%;
+    height: 87%;
+    display: none;
+    color: #E7E7E7; 
+    font-size: 2vw;
+    padding-top: 3%;
+    position: absolute;
+    text-align: center;
+    transform: scale(.1);
+    background-color: #2D2D2D;
+    transition: .5s all ease-in-out/*cubic-bezier(.5, -.2, .2, .95);*/
+}
+
+.cnchi > div.letStart > p { 
+    width: 100%;
+    font-size: 2vw
+}
+
+.cnchi > div.letStart > p i { color: #EF4578 }
+/*######################## end cnchi (install antergos ) */
+
+
+/*######################## start terminal */
+.terminal {
+    top: 10%;
+    left: 10%;
+	width: 80%;
+    height: 80vh;
+    display: none;
+    position: absolute;
+    box-shadow: 0 0 10px #000;
+    background-color: #030C19;
+    border-bottom: 1px solid rgba(72, 72, 72, .5)
+}
+
+.terminal .ter_header {
+    width: 100%;
+    background-color: #E7E7E7
+	
+}
+
+.ter_header .title_header {
+    width: 100%;
+    height: 40px;
+    color: #C9DCDC;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    background-color: #2D2D2D
+}
+
+.title_header .ter_controls {
+	float: right;
+    font-size: 2vw;
+    margin-right: 2%;
+    word-spacing: 10px;
+    cursor: pointer
+}
+
+.terminal .menu_header { height: 25px }
+
+.menu_header > li {
+    z-index: 2;
+	float: left;
+    height: 100%;
+    cursor: default;
+    line-height: 25px;
+    position: relative;
+    padding: 0 10px 0 5px;
+    transition: 0.2s all ease-in-out
+}
+
+.menu_header > li:hover { 
+    color: #FFF;
+    background-color: #2D2D2D;
+}
+
+
+
+.menu_header > li > ul {
+    left: 0;
+    /*display: none;*/
+    min-width: 300px;
+    font-size: 1.1vw;
+    text-align: center;
+    position: absolute;
+    transform: scale(0);
+    background-color: #2D2D2D;
+    transition: .2s all ease-in-out
+    
+}
+
+.menu_header > li:hover > ul { 
+    /*display: block;*/
+    transform: scale(1)
+}
+
+.menu_header > li > ul > li {
+    color: #FFF;
+    overflow: hidden;
+    text-align: left;
+    padding: 5px 15px;
+    transition: .1s background ease-in-out
+}
+
+.menu_header > li > ul > li.noneClick { color: #888; }
+
+.menu_header > li > ul  li:hover { background-color: #134FE6 }
+
+.menu_header > li > ul li > i { margin-right: 5px }
+
+.menu_header > li > ul li > i.ac { color: #134FE6 }
+
+.menu_header > li > ul > li > span{
+    float: right;
+    color: #7F7F7F;
+    margin-right: 10px;
+}
+
+.menu_header > li > ul > li.encod {
+	position: relative;
+    overflow: visible
+}
+
+.menu_header > li > ul > li > ul {
+    top: 0;
+    left: 100%;
+    width: 80%;
+    position: absolute;
+    transform: scale(0);
+    background-color: #2D2D2D;
+    transition: .2s all ease-in-out
+}
+
+.encod:hover ul { transform: scale(1) }
+
+.encod ul > li {
+    text-align: left;
+    padding: 5px 15px
+}
+
+.line_terminal {
+    height: 24px;
+    font-size: 1.7vw;
+    font-family: "Ubuntu Mono"
+}
+
+.line_terminal > span {
+    height: 100%;
+    color: #FFF;
+    line-height: 24px;
+    position: relative;
+    display: inline-block
+}
+
+.brompt { 
+    text-align: center; 
+    background-color: #0187AF   
+}
+
+.brompt:before {
+    left: 100%;
+    content: "";
+    position: absolute;
+    border: 12px solid;
+    border-color: transparent transparent transparent #0187AF
+}
+
+.ter_place { 
+    min-width: 10%;
+    margin-left: 15px;
+    text-align: center;
+    background-color: #2D2D2D
+}
+
+.ter_place:before {
+    right: 100%;
+    content: "";
+    position: absolute;
+    border: 12px solid;
+    border-color: #2D2D2D #2D2D2D #2D2D2D transparent 
+}
+
+.ter_place:after {
+    left: 100%;
+    content: "";
+    position: absolute;
+    border: 12px solid;
+    border-color: transparent transparent transparent #2D2D2D
+}
+
+.line_edit {
+    color: #FFF;
+    width: 74%
+}
+
+.commands {
+    outline: none;
+    text-align: left;
+    margin-left: 2%;
+    color: transparent;
+    text-shadow: 0 0 0 #FFF
+}
+
+.line_edit  span.blink {
+    top: 5%;
+    width: 15px;
+    height: 99%;
+    position: absolute;
+    display: inline-block;
+    background-color: #fff;
+    -webkit-animation: blink 1.5s infinite linear;
+       -moz-animation: blink 1.5s infinite linear;
+        -ms-animation: blink 1.5s infinite linear;
+         -o-animation: blink 1.5s infinite linear;
+            animation: blink 1.5s linear infinite
+}
+
+/*######################## end terminal */
+
+
+/*######################## Start leftMainNav */
+
+.desktop .leftMainNav {
+    width: 5vw;
+    height: 70vh;
+    margin-top: 6%;
+    text-align: center;
+	background-color: #2D2D2D /*#000C1F*/;
+    box-shadow: 0 0 15px #000;
+    border-radius: 0 2px 2px 0;
+}
+
+.desktop .leftMainNav > span {
+    width: 80%;
+    height: 13%;
+    z-index: 10;
+    margin-top: 16%;
+    position: relative;
+    border-radius: 3px;
+    background-size: 80%;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    transition: .2s background ease;
+    background-image: url("images/antergos.png")
+}
+
+
+.leftMainNav > span:nth-child(2) {
+    background-image: url("images/antergos/icons/preferences.png")
+}
+
+.leftMainNav > span:nth-child(3) {
+    background-image: url("images/antergos/icons/terminal.png")
+}
+
+.leftMainNav > span:nth-child(4) {
+    background-image: url("images/antergos/icons/chromium")
+}
+
+.leftMainNav > span:nth-child(5) {
+    background-image: url("images/antergos/icons/text-editor.png")
+}
+
+.leftMainNav > span:nth-child(6) {
+    background-image: url("images/antergos/icons/gnome.png")
+}
+
+.desktop .leftMainNav > span:hover {
+    background-color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .5)
+}
+
+.desktop .leftMainNav > span.open:before,
+.desktop .leftMainNav > span.open:after {
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    content: "";
+    position: absolute;
+    background-color: #134FE6
+}
+
+.desktop .leftMainNav > span.open:before { bottom: 0 }
+
+.desktop .leftMainNav > span.open:after { top: 0 }
+
+.rightclick,
+.leftMainNav > span > span {
+    top: 25%;
+    left: 120%;
+    color: #FFF;
+    display: none;
+    padding: 0 8%;
+    min-width: 100%;
+    padding: 5px 25px;
+    text-align: center;
+	position: absolute;
+    border-radius: 2px;
+    background-color: #2D2D2D;
+    border: 1px solid rgba(70, 70, 70,.5)
+}
+
+.rightclick {
+    top: -20%;
+    width: 150px;
+}
+
+/*######################## End leftMainNav */
+
+
+/*######################## start all apps */
+
+.allapps {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+	position: absolute;
+    background-color: #12161a /*rgba(0, 12, 31, .9)*/
+}
+
+form {
+    width: 25%;
+    margin: 5% auto 0;
+    position: relative
+}
+
+form > input {
+    width: 100%;
+    color: #FFF;
+    padding: 2% 3%;
+    border-radius: 3px;
+    border: 1px solid #000C1F;
+    background-color: #2D2D2D /*rgba(0, 12, 31, .4)*/
+}
+
+form > i {
+    position: absolute;
+    left: 90%;
+    top: 25%;
+    color: #FFF
+}
+
+.allapps .applications {
+    width: 70%;
+    left: 15%;
+    padding: 2%;
+	position: relative;
+    text-align: center
+}
+
+.allapps .applications > div {
+    overflow-y: scroll;
+    max-height: 63.5vh
+}
+
+.allapps .applications > div li {
+    opacity: 0;
+    top: -100vh;
+    width: 14vh;
+    height: 13vh;
+    color: #A0A0A0;
+    margin-top: 3%;
+    cursor: pointer;
+    margin-right: 5%;
+    border-radius: 3px;
+    text-align: center;
+    position: absolute;
+    background-size: 70%;
+	display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .2s background ease, .2s font ease, 1s position ease;
+    background-image: url(images/antergos/icons/acetoneiso.png);
+}
+
+.applications > div > li:nth-child(2)  { background-image: url(images/antergos/icons/ardour.png) }
+.applications > div > li:nth-child(3)  { background-image: url(images/antergos/icons/arduino.png) }
+.applications > div > li:nth-child(4)  { background-image: url(images/antergos/icons/atom.png) }
+.applications > div > li:nth-child(5)  { background-image: url(images/antergos/icons/base.png) }
+.applications > div > li:nth-child(6)  { background-image: url(images/antergos/icons/birdie.png) }
+.applications > div > li:nth-child(7)  { background-image: url(images/antergos/icons/brackets.png) }
+.applications > div > li:nth-child(8)  { background-image: url(images/antergos/icons/calc.png) }
+.applications > div > li:nth-child(9)  { background-image: url(images/antergos/icons/cheese.png) }
+.applications > div > li:nth-child(10) { background-image: url(images/antergos/icons/chromium.png) }
+.applications > div > li:nth-child(11) { background-image: url(images/antergos/icons/clementine.png) }
+.applications > div > li:nth-child(12) { background-image: url(images/antergos/icons/codeblocks.png) }
+.applications > div > li:nth-child(13) { background-image: url(images/antergos/icons/draw.png) }
+.applications > div > li:nth-child(14) { background-image: url(images/antergos/icons/emacs.png) }
+.applications > div > li:nth-child(15) { background-image: url(images/antergos/icons/filezilla.png) }
+.applications > div > li:nth-child(16) { background-image: url(images/antergos/icons/finalterm.png) }
+.applications > div > li:nth-child(17) { background-image: url(images/antergos/icons/firefox.png) }
+.applications > div > li:nth-child(18) { background-image: url(images/antergos/icons/iceweasel.png) }
+.applications > div > li:nth-child(19) { background-image: url(images/antergos/icons/impress.png) }
+.applications > div > li:nth-child(20) { background-image: url(images/antergos/icons/inkscape.png) }
+.applications > div > li:nth-child(21) { background-image: url(images/antergos/icons/jamin.png) }
+.applications > div > li:nth-child(22) { background-image: url(images/antergos/icons/math.png) }
+.applications > div > li:nth-child(23) { background-image: url(images/antergos/icons/ninja-ide.png) }
+.applications > div > li:nth-child(24) { background-image: url(images/antergos/icons/phpmyadmin.png) }
+.applications > div > li:nth-child(25) { background-image: url(images/antergos/icons/preferences.png) }
+.applications > div > li:nth-child(26) { background-image: url(images/antergos/icons/pycad.png) }
+.applications > div > li:nth-child(27) { background-image: url(images/antergos/icons/pycharm.png) }
+.applications > div > li:nth-child(28) { background-image: url(images/antergos/icons/python.png) }
+.applications > div > li:nth-child(29) { background-image: url(images/antergos/icons/qtD.png) }
+.applications > div > li:nth-child(30) { background-image: url(images/antergos/icons/recordmydesktop.png) }
+.applications > div > li:nth-child(31) { background-image: url(images/antergos/icons/octave.png) }
+.applications > div > li:nth-child(32) { background-image: url(images/antergos/icons/skype.png) }
+.applications > div > li:nth-child(33) { background-image: url(images/antergos/icons/steam.png) }
+.applications > div > li:nth-child(34) { background-image: url(images/antergos/icons/stellarium.png) }
+.applications > div > li:nth-child(35) { background-image: url(images/antergos/icons/stylesheets.png) }
+.applications > div > li:nth-child(36) { background-image: url(images/antergos/icons/terminal.png) }
+
+.applications > div > li:nth-child(37) { background-image: url(images/antergos/icons/terminator.png) }
+.applications > div > li:nth-child(38) { background-image: url(images/antergos/icons/text-editor.png) }
+.applications > div > li:nth-child(39) { background-image: url(images/antergos/icons/vidalia.png) }
+.applications > div > li:nth-child(40) { background-image: url(images/antergos/icons/virtualbox.png) }
+.applications > div > li:nth-child(41) { background-image: url(images/antergos/icons/vlc.png) }
+.applications > div > li:nth-child(42) { background-image: url(images/antergos/icons/vm-player.png) }
+.applications > div > li:nth-child(43) { background-image: url(images/antergos/icons/weather.png) }
+.applications > div > li:nth-child(44) { background-image: url(images/antergos/icons/webdesigner.png) }
+.applications > div > li:nth-child(45) { background-image: url(images/antergos/icons/winebrowser.png) }
+.applications > div > li:nth-child(46) { background-image: url(images/antergos/icons/wine.png) }
+.applications > div > li:nth-child(47) { background-image: url(images/antergos/icons/winecfg.png) }
+
+.applications > div > li:nth-child(48) { background-image: url(images/antergos/icons/winefolder.png) }
+.applications > div > li:nth-child(49) { background-image: url(images/antergos/icons/wireshark.png) }
+.applications > div > li:nth-child(50) { background-image: url(images/antergos/icons/writer.png) }
+.applications > div > li:nth-child(51) { background-image: url(images/antergos/icons/xampp.png) }
+.applications > div > li:nth-child(52) { background-image: url(images/antergos/icons/xchat.png) }
+.applications > div > li:nth-child(53) { background-image: url(images/antergos/icons/xterm.png) }
+.applications > div > li:nth-child(54) { background-image: url(images/antergos/icons/yakuake.png) }
+.applications > div > li:nth-child(55) { background-image: url(images/antergos/icons/zotero.png) }
+
+
+.applications > div > li:hover { 
+    color: #FFF;
+    background-color: rgba(45, 180, 220, .3)
+}
+
+.applications li > span {
+    margin: 96% auto 0;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.allapps .applications > button {
+    width: 10%;
+    border: none;
+    color: #FFF;
+    position: fixed;
+    bottom: 8%;
+    left: 40%;
+    padding: 3px 0;
+    margin-right: -4px;
+    background-color: #555;
+}
+
+.applications > button:focus { outline: none }
+
+.applications > button.chek {background-color: #0B71A7 }
+
+.applications > button:first-of-type { border-radius: 3px 0 0 3px }
+
+.applications > button:last-of-type  {
+    left: 50%;
+    border-radius: 0 3px 3px 0
+}
+
+.allapps > span {
+    top: 50%;
+    left: 90%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+	position: absolute;
+    display: inline-block;
+    border: 2px solid #CCC;
+    transition: .2s background ease
+}
+
+.allapps .centapps { top: 55%}
+
+.allapps .nextapps { top: 60%}
+
+.allapps > span:hover { background-color: #134FE6 }
+
+.allapps > span.this_apps { background-color: #FFF }
+
+/*######################## end all apps */
+
+
+/*######################## start virtual desktop */
+.virtual_desktop {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+	position: absolute;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.desktops {
+    float: right;
+    width: 15%;
+    margin-top: 5%;
+    height: 85vh;
+    border-radius: 2px 0 0 2px;
+    background-color: #2D2D2D
+}
+
+.desktops .desk {
+	width: 90%;
+    height: 23%;
+    margin: 4% auto;
+    border-radius: 2px;
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    border: 3px solid transparent;
+    transition: .2s border linear;
+    background-image: url("../css/images/antergos/2-min.png");
+}
+
+.desktops .desk.this_desk { border-color: #FEE }
+
+.virtual_desktop form {
+    width: 25%;
+    margin-top: 5%;
+    position: absolute;
+    left: 40%
+}
+/*######################## end virtual desktop */
+
+/*############################### End Desktop */
+
+
+/*############################### Start media */
+@media screen and (max-width: 1000px) { 
+    .login .welcome {
+        width: 90%;
+        left: 4%
+    }
+    
+    .login .welcome > span {
+        height: 135px;
+        line-height: 135px
+    }
+    
+    .login .welcome .cntr > i {
+        float: none;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        box-shadow: -1px 2px 0 0 rgba(100, 100, 100, .7);
+    }
+    
+    .login .rightNav { 
+        width: 100%; 
+        margin-right: -100vw;
+        background-color: rgba(0, 0, 0, .8);
+    }
+    
+    .login .rightNav.navOpen { margin-right: 0  }
+    
+    .rightNav > li { height: 50vh }
+    
+    .rightNav > span {
+        margin: 10% 0;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+    
+}
+/*+-------------------------- End media  --------------------------+*/
+
+
+
+
+
+
