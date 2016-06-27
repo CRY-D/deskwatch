@@ -1,0 +1,76 @@
+
+/*
+ * ReadMap.txt
+ * 
+ * Copyright 2016 Moussaoui Abdelkader (msfa)  <hss91@yandex.com> 2016-06-27 
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ * 
+ * 
+ */
+
+?? REMEMBER: not work in firefox just Chromium or google-Chrom
+	1) applications search list animations 
+	2) scrollbar 
+	
+#Loading Page
+#home
+@gnome
+      |____ + right click
+      |____ + this app in left nav
+      
++Kde
++Unity
++Cinnamon
++Xfce
++Lxde
+
++++++++++++++++++++++++++++ MAP +++++++++++++++++++++++++++ 
+diskwatch/
+		 |____ index.html
+		 |____ css/
+		 |		  |____ font-awesome.css
+		 |		  |____ style.css
+		 |		  |____ normalize.css
+		 |		  |____ main.css
+		 |		  |____ gnome.css
+		 |		  |____ kde.css
+		 |		  |____ unity.css
+		 |		  |____ cinnamon.css
+		 |		  |____ xfce.css
+		 |		  |____ lxde.css
+		 |		  |____ animations/
+         |        |               |____ animation.css
+         |        |
+         |        |
+		 |		  |____ images/
+         |
+		 |____ js/
+		 |		 |____ jquery.js
+		 |		 |____ jqui.js
+		 |		 |____ script.js
+		 |		 |____ scroll.js
+		 |		 |____ time.js
+		 |		 
+		 |____ fonts/
+		 |____ images/
+		 |____ desktop/
+					  |____ gnome.html
+					  |____ kde.html
+					  |____ unity.html
+					  |____ cinnamon.html
+					  |____ xfce.html
+					  |____ lxde.html

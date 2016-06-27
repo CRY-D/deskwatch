@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/normalise.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/animations/animation.css">
+        <link rel="stylesheet" href="../css/gnome.css" media="screen">
+        <title>Gnome Desktop</title>
+        <script src="../js/time.js"></script>
+    </head>
+
+    <body>
+        <div class="gnome">
+            <!-- Start Login -->
+            <div class="login">
+                <div class="welcome">
+                    <h1>Welcome To Gnome Desktop!</h1> antergos login
+                    <span class="time" id="wel">
+                            <script>
+                                var t = document.getElementById("wel");
+                                rTime = setInterval(function () {
+                                    "use strict";
+                                    t.innerHTML = getTimeDate();
+                                }, 1000);
+                            </script>
+                        </span>
+                    <div class="user">
+                        <span>
+                            antergos
+                            <img src="../css/images/antergos2.png" alt="user">
+                        </span>
+                        <i class="fa fa-toggle-down"></i>
+                    </div>
+                    <div class="cntr">
+                        <i class="fa fa-refresh" title="Restart"></i>
+                        <i class="fa fa-arrow-down" title="Suspend"></i>
+                        <i class="fa fa-power-off" title="Shutdown"></i>
+                    </div>
+                </div>
+                <i class="fa fa-bars close"></i>
+                <ul class="rightNav">
+                    <span>Background Options</span>
+                    <li></li><li></li><li></li><li></li><li></li>
+                    <li></li><li></li><li></li><li></li><li></li>
+                    <li></li><li></li><li></li><li></li><li></li>
+                    <li></li><li></li><li></li><li></li><li></li>
+                </ul>
+                <div class="over"></div>
+            </div>
+
+            <!-- Start Desktop -->
+            <div class="desktop">
+                <ul class="navBar">
+                    <li class="showUl activities"><span>Activities</span></li>
+                    <!-- start palces -->
+                    <li class="showUl">
+                        <span> 
+                           Places <i class="fa fa-caret-down"></i>
+                        </span>
+                        <ul>
+                            <li><i class="fa fa-home"></i>Home</li>
+                            <li><i class="fa fa-file-pdf-o"></i>Documents</li>
+                            <li><i class="fa fa-download"></i>Downloads</li>
+                            <li><i class="fa fa-music"></i>Music</li>
+                            <li><i class="fa fa-picture-o"></i>Picturs</li>
+                            <li><i class="fa fa-file-movie-o"></i>Videos</li>
+                            <br>
+                            <span class="line"></span>
+                            <li><i class="fa fa-hdd-o"></i>Computer</li>
+                            <span class="line"></span>
+                            <br>
+                            <li><i class="fa fa-wifi"></i>Network</li>
+                        </ul>
+                    </li>
+                    <!-- end palces -->
+
+                    <!-- start time & weather -->
+                    <li class="showUl">
+                        <span class="w">
+                            <i class="fa fa-calendar"></i>
+                            <span id="getime"></span>&nbsp;&nbsp;&nbsp;
+                            <span class="deg"></span>
+                        </span>
+                        <script>
+                            var time = document.getElementById("getime"),
+                                runTime = setInterval(function() {
+                                    "use strict";
+                                    time.innerHTML = getTimeDate();
+                                }, 1000);
+                        </script>
+                        <ul class="date_time">
+                            <div class="notification">
+                               <span class="not">
+                                    <i class="fa fa-comments fa-4x"></i>
+                                    No Notifications
+                               </span>
+                                <span class="weather">
+                                   <span class="fa-stack fa-3x">
+                                          <i class="fa fa-circle-o fa-stack-2x"></i>
+                                          <i class="fa fa-globe fa-stack-1x"></i>
+                                    </span>
+                                    <span class="get_weather"></span>
+                                    <!-- <i class="fa fa-cloud"></i> -->
+                                </span>
+                            </div>
+                            <div class="cal">
+                                <span id="test"></span>
+                                <span id="test2"></span>
+                                <script>
+                                    var cal = new Date(),
+                                        d = cal.toDateString(),
+                                        id  = document.getElementById("test"),
+                                        id2  = document.getElementById("test2");                                
+                                    id.innerHTML = d.substring(0, 3);                    
+                                    id2.innerHTML = d.substring(4, 15);                    
+                                </script>
+                                <span class="control">
+                                    <i class="fa fa-caret-left"></i>
+                                       <span id="month"></span>
+                                       <script src="../js/time.js"></script>
+                                        <script>
+                                            var ii = document.getElementById("month");
+                                            var getM = setInterval(function () {
+
+                                                ii.innerHTML = getmnth();
+
+                                            }, 1000);
+                                        </script>
+                                    <i class="fa fa-caret-right"></i>
+                                </span>
+                                <div class="main_cal">
+                                    <button value="S" class="days">Mo</button>
+                                    <button value="S" class="days">Tu</button>
+                                    <button value="M" class="days">We</button>
+                                    <button value="T" class="days">Th</button>
+                                    <button value="W" class="days">Fr</button>
+                                    <button value="F" class="days">Sa</button>
+                                    <button value="S" class="days">Sn</button>
+
+                                    <button value="31" class="cout">31</button>
+                                    <button value="1">1</button>
+                                    <button value="2">2</button>
+                                    <button value="3" class="this_day">3</button>
+                                    <button value="4">4</button>
+                                    <button value="5">5</button>
+                                    <button value="6" class="cout">6</button>
+                                    <button value="7" class="cout">7</button>
+                                    <button value="8">8</button>
+                                    <button value="9">9</button>
+                                    <button value="10">10</button>
+                                    <button value="11">11</button>
+                                    <button value="12">12</button>
+                                    <button value="13" class="cout">13</button>
+                                    <button value="14" class="cout">14</button>
+                                    <button value="15">15</button>
+                                    <button value="16">16</button>
+                                    <button value="17">17</button>
+                                    <button value="18">18</button>
+                                    <button value="19">19</button>
+                                    <button value="20" class="cout">20</button>
+                                    <button value="21" class="cout">21</button>
+                                    <button value="22">22</button>
+                                    <button value="23">23</button>
+                                    <button value="24">24</button>
+                                    <button value="25">25</button>
+                                    <button value="26">26</button>
+                                    <button value="27" class="cout">27</button>
+                                    <button value="28" class="cout">28</button>
+                                    <button value="29">29</button>
+                                    <button value="1">1</button>
+                                    <button value="2">2</button>
+                                    <button value="3">3</button>
+                                    <button value="4">4</button>
+                                    <button value="5" class="cout">5</button>
+                                    <button value="6" class="cout">6</button>
+                                    <button value="7">7</button>
+                                    <button value="8">8</button>
+                                    <button value="9">9</button>
+                                    <button value="10">10</button>
+                                    <button value="11">11</button>
+                                    <button value="12" class="cout">12</button>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <!-- end time & weather -->
+
+                    <!-- start settings -->
+                    <li class="showUl settings">
+                        <span>
+                            <i class="fa fa-wifi"></i>
+                            <i class="fa fa-volume-up"></i>
+                            <i class="fa fa-battery-full"></i>
+                            <i class="fa fa-caret-down"></i>
+                        </span>
+                        <ul>
+                            <!-- start volume -->
+                            <li> 
+                                <span class="vlm"></span>
+                                <i class="fa fa-volume-up"></i>
+                                <input type="range" max="100" min="0">
+                                <h6 class="vl"></h6>
+                            </li>
+                            <span class="line"></span>
+
+
+                            <!-- start connection -->
+                            <li>
+                                <span class="conn">
+                                    <i class="fa fa-wifi"></i> Wirless
+                                </span>
+                                <span class="stat">
+                                    Connected <i class="fa fa-caret-right"></i>
+                                </span>
+                                <div>
+                                   <span><span>Turn Off</span>
+                                       <span class="stat">
+                                            <i class="onoff fa fa-toggle-off"></i>
+                                        </span>
+                                   </span>
+                                    <span class="connected">&#8226; DJAWEB
+                                        <span class="stat">
+                                            <i class="fa fa-wifi"></i>
+                                        </span>
+                                    </span>
+                                    <span>tout
+                                        <span class="stat">
+                                            <i class="fa fa-wifi"></i>
+                                        </span>
+                                    </span>
+                                    <span>mosfa
+                                        <span class="stat">
+                                            <i class="fa fa-wifi"></i>
+                                        </span>
+                                    </span>
+                                    <span>Network Settings</span>
+                                </div>
+                            </li>
+
+                            <!-- start battery -->
+                            <li>
+                                <span class="conn">
+                                    <i class="fa fa-battery-full"></i>Battery
+                                </span>
+                                <span class="stat">
+                                    Fully Charged <i class="fa fa-caret-right"></i>
+                                </span>
+                                <div>
+                                    <span>Power Settings</span>
+                                </div>                     	
+                            </li>
+                            <span class="line"></span>
+                            <!-- start user logout -->
+                            <li>
+                                <span class="conn">
+                                   <span class="fa-stack fa-1x">
+                                          <i class="fa fa-square-o fa-stack-2x"></i>
+                                          <i class="fa fa-user fa-stack-1x"></i>
+                                    </span>
+                                     antergos
+                                </span>
+                                <span class="stat">
+                                    <i class="fa fa-caret-right"></i>
+                                </span>
+                                <div>
+                                    <span>Log Out</span>
+                                </div>                        	
+                            </li>
+                            <span class="line"></span>
+                            <!-- start poweroff & restart -->
+                            <li class="pow_last">
+                                <i class="fa fa-sliders"></i>
+                                <i class="fa fa-lock"></i>
+                                <i class="fa fa-download"></i>
+                                <i class="fa fa-power-off"></i>    
+                            </li>
+                        </ul>
+                    </li><!-- end settings -->
+                </ul>
+
+                <!-- start cnchi (install antergos )-->
+                <div class="cnchi">
+                    <a class="circle_o">&times;</a>
+                    <div class="header">
+                        <span class="bgi"></span>
+                        <h3><span>Cnchi 0.12.12<br></span>Welcome to Antergos!</h3>
+                        <span class="mini">
+                            <span class="cnchi_minu">
+                                &minus; 
+                            </span>
+                            <span class="cnchi_close">
+                                &times;
+                            </span>
+                        </span>
+                    </div>
+                    <div class="try">
+                        <i class="fa fa-desktop"></i>
+                        <p>
+                            Use Antergos Without making
+                            any changes to your system.
+                        </p>
+                        <button class="try_it">Try It </button>
+                    </div>
+                    <div class="install">
+                        <i class="fa fa-cloud-download"></i>
+                        <p>
+                            Create a permanent place for
+                            Antergos on your system
+                        </p>
+                        <button class="install_it">Install It</button>
+                    </div>
+                    <div class="letStart">
+                        <i class="fa fa-child fa-3x"></i><br>
+                        <p>But Remember This Is not The Real Gnome Desktop&nbsp;&nbsp;
+                            <i class="fa fa-frown-o"></i>
+                        </p>
+                        
+                        <span></span>
+                    </div>
+                </div>
+                <!-- end cnchi (install antergos )  -->
+                
+                <!-- start terminal  -->
+                <div class="terminal">
+                    <div class="ter_header">
+                        <span class="title_header">
+                            <span class="ter_user">antergos@arch:~</span>
+                            <span class="ter_controls">&minus; &times;</span>
+                        </span>
+                        <ul class="menu_header">
+                           <li>File
+                               <ul>
+                                   <li><i class="fa fa-folder-open"></i>Open Terminal<span>Shift+Ctrl+N</span></li>
+                                   <li><i class="fa fa-columns"></i>Open Tab<span>Shift+Ctrl+T</span></li>
+                                   <li><i class="fa fa-folder"></i>New Profile</li>
+                                   <span class="line"></span>
+                                   <li class="noneClick"><i class="fa fa-close"></i>Close Tab<span>Shift+Ctrl+W</span></li>
+                                   <li><i class="fa fa-close"></i>Close Window<span>Shift+Ctrl+Q</span></li>
+                               
+                               </ul>
+                           </li>
+                           <li>Edit
+                               <ul>
+                                   <li class="noneClick"><i class="fa fa-copy"></i>Copy<span>Shift+Ctrl+C</span></li>
+                                   <li><i class="fa fa-paste"></i>Paste<span>Shift+Ctrl+V</span></li>
+                                   <li><i class="fa fa-stop"></i>Select All</li>
+                                   <span class="line"></span>
+                                   <li><i></i>Profiles...</li>
+                                   <li><i></i>Keyboard Shortcuts...</li>
+                                   <li><i></i>Profile Preferences</li>
+                               </ul>
+                           </li>
+                           <li>View
+                               <ul>
+                                   <li><i class="ac fa fa-check-square"></i>Show Menubar</li>
+                                   <li><i class="fa fa-square"></i>Full Screen<span>F11</span></li>
+                                   <li><i class="fa fa-plus-square"></i>Zoom In<span>Ctrl++</span></li>
+                                   <li><i class="fa fa-minus-square"></i>Zoom Out<span>Ctrl+-</span></li>
+                                   <li><i class="fa fa-dot-circle-o"></i>Normal Size<span>Ctrl+0</span></li>
+                               </ul>
+                           </li>
+                           <li>Search
+                               <ul>
+                                   <li><i class="fa fa-search"></i>Find...<span>Shift+Ctrl+F</span></li>
+                                   <li><i class="fa fa-search-plus"></i>Find Next<span>Shift+Ctrl+H</span></li>
+                                   <li><i class="fa fa-search-minus"></i>Find Previous<span>Shift+Ctrl+G</span></li>
+                               </ul>
+                           </li>
+                           <li>Terminal
+                               <ul>
+                                   <li class="noneClick"><i></i>Change Profile</li>
+                                   <li><i></i>Set Title...</li>
+                                   <li class="encod"><i></i>Set Character Encoding 
+                                       <span><i class="fa fa-angle-right"></i></span>
+                                       <ul>
+                                           <li><i class="fa fa-circle"></i>Current Locale (UTF-8)</li>
+                                           <li><i class="ac fa fa-check-circle"></i>Unicode (UTF-8)</li>
+                                           <li><i class="fa fa-plus-circle"></i>Add or remove...</li>
+                                       </ul>
+                                   </li>
+                                   <span class="line"></span>
+                                   <li><i></i>Reset</li>
+                                   <li><i></i>Reset and Clear</li>
+                                   <span class="line"></span>
+                                   <li><i></i>1. 80&times;24</li>
+                                   <li><i></i>2. 80&times;43</li>
+                                   <li><i></i>3. 132&times;24</li>
+                                   <li><i></i>4. 132&times;43</li>
+                               </ul>
+                           </li>
+                           <li>Help
+                               <ul>
+                                   <li><i class="fa fa-question-circle"></i>Contents<span>F1</span></li>
+                                   <li><i class="fa fa-star"></i>About</li>
+                               </ul>
+                           </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="body_terminal">
+                        <div class="line_terminal">
+                            <span class="brompt">[antergos] </span>
+                            <span class="ter_place">&#126;</span>
+                            <span class="line_edit">
+                                <span class="commands" contenteditable="true"></span>
+                                <span class="blink"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- end terminal  -->
+
+                <!-- start left nav bar -->
+                <div class="leftMainNav" oncontextmenu="return false;">
+                    <span>
+                        <span class="title">Install&nbsp;antergos</span>
+                        <ul class="rightclick">
+                          <li>remove</li>
+                          <span class="line"></span>
+                          <li>remove</li>
+                        </ul>
+                    </span>
+                    <span>
+                        <span class="title">System&nbsp;Settings</span>
+                    </span>
+                    <span class="open_ter">
+                        <span class="title">Terminator</span>
+                    </span>
+                    <span>
+                        <span class="title">Chromium&nbsp;Browser</span>
+                    </span>
+                    <span>
+                        <span class="title">Gedit</span>
+                    </span>
+                    <span class="showapps">
+                        <span class="title">Show&nbsp;Applications</span>
+                    </span>
+                </div>
+                <!-- end left nav bar -->
+
+                <!-- start all apps -->
+                <div class="allapps">
+                    <form action="">
+                        <input type="text" placeholder="Type to search">
+                        <i class="fa fa-crosshairs"></i>
+                    </form>
+                    <ul class="applications">
+                        <div id="ul">
+                            <script>
+                               var  m = document.getElementById("ul"),
+                                    i = 1;                    
+                               for (i; i <= 54; i++) {
+                                   m.innerHTML += "<li><span></span></li>"
+                               }
+                            </script>
+                        </div>
+                        <button id="frequent">Frequent</button>
+                        <button class="chek" id="all">All</button>
+                    </ul>
+                    <span class="prevapps this_apps"></span>
+                    <span class="centapps"></span>
+                    <span class="nextapps"></span>
+                </div>          
+                <!-- end all apps-->
+
+                <!-- start virtual desktop -->
+                <div class="virtual_desktop">
+                    <form action="">
+                        <input type="text" placeholder="Type to search">
+                        <i class="fa fa-crosshairs"></i>
+                    </form>
+                    <div class="desktops">
+                        <div class="desk this_desk">Desktop</div>
+                        <div class="desk">Desktop</div>
+                        <div class="desk">Desktop</div>
+                        <div class="desk">Desktop</div>
+                    </div>               
+                </div>
+                <!-- end virtual desktop -->
+
+            </div><!-- End Desktop -->
+        </div>
+
+        <script src="../js/jquery.js"></script>
+        <script src="../js/geoip2.js"></script>
+        <script src="../js/desktop/gnome.js"></script>
+    </body>
+
+</html>
