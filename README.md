@@ -1,4 +1,4 @@
-deskwatch is an web application to try linux desktops(unity, gnome, xfce) online 
-#gnome
- -login
-![alt text](https://user-images.githubusercontent.com/16564491/58293918-782dbe00-7dbf-11e9-838c-5f31aff23818.png)
+deskwatch is an web application to try linux desktops(unity, gnome, xfce) online <br>
+# gnome <br>
+ - login
+![alt text](https://github.com/mosfa/deskwatch/blob/master/media/1.png)
